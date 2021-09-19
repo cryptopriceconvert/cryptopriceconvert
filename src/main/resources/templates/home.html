@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/default">
+<body>
+	<div id="page" layout:fragment="content">
+		<header>
+			<div class="box">
+				<div class="heading-crypto">
+					<h2 class="h2">Cryptocurrency Converter Calculator</h2>
+				</div>
+				<div class="hello">
+					<div class="box-input">
+						<div class="first-input">
+							<form>
+								<input type="number" placeholder="Enter the Amount"
+									id="inputNumber">
+							</form>
+						</div>
+						<div class=" flex-input">
+							<div class="second-input">
+								<!-- <input type="number"  > -->
+								<select name="" id="fromCurr"
+									aria-label="Default select example">
+									<option value="2" selectedselected="">USD</option>
+									<option value="1">INR</option>
+								</select>
+							</div>
+							<span class="blue-button"> <i class="fa fa-arrows-h"
+								aria-hidden="true" id="java-btn" onclick="change()"></i>
+							</span>
+							<div class="third-input">
+								<!-- <input type="number" > -->
+								<select name="" id="toCurr" aria-label="Default select example">
+									<option value="2">USD</option>
+									<option value="1" selected="">INR</option>
+								</select>
+							</div>
+						</div>
+						<div style="text-align: center; margin-top: 4%;">
+							<span> 1 USD(dollor "$")=<b><span id="resultValue">0</span></b></span>
+							INR( RUPEE"Rs.")
+						</div>
+						<button type="button" id="btn" onclick="change()"
+							style="margin-left: 41%; margin-top: 1%; padding: 7px 24px;">see
+							graph</button>
+					</div>
+				</div>
+		</header>
+	</div>
+</body>
+</html>
