@@ -13,7 +13,7 @@
 	<div id="page" layout:fragment="content">
 		<p th:text="${allCrypto.btcinr.base_unit}"></p>
 		<p th:text="${allCrypto.btcinr.quote_unit}"></p>
-		<p th:inline="text">Rs. [[${#numbers.formatInteger(allCrypto.btcinr.buy,3,'POINT')}]]</p>
+		<p th:inline="text">Rs. [[${#numbers.formatInteger(allCrypto.btcinr.buy,6,'POINT')}]]</p>
 	</div>
 </body>
 </html>

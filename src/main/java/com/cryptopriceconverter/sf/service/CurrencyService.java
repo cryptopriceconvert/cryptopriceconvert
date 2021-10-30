@@ -1,7 +1,7 @@
 package com.cryptopriceconverter.sf.service;
 
-import java.util.ArrayList;
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,13 +15,18 @@ public class CurrencyService {
 	public CurrencyRepository currencyRepo;
 	
 	public List<Currency> getAllCurrencies(){
-		List<Currency> currencies = new ArrayList<Currency>();
-		// List<Currency> currenc = currencyRepo.findAll();
-		return currencies;
+//		List<Currency> currencies = new ArrayList<Currency>();
+		List<Currency> currenc = currencyRepo.findAll();
+		return currenc;
 	}
 	
 	public Currency getCurrencyByID(Long id) {
 		Currency c = currencyRepo.findById(id).get();
+		return c;
+	}
+	
+	public Currency getCurrencyByName(String name) {
+		Currency c = currencyRepo.findByName(name).get();
 		return c;
 	}
 }
