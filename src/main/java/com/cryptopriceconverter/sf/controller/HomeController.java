@@ -39,6 +39,11 @@ public class HomeController {
 	public String getHomePage() {
 		return "home.html";
 	}
+	
+	@GetMapping("/crypto")
+	public String getCryptoHomePage() {
+		return "home-crypto.html";
+	}
 
 	@GetMapping("/about-us")
 	public String getAboutUsPage() {
